@@ -1,0 +1,34 @@
+﻿<Window x:Class="Clock.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Clock"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" AllowsTransparency="True" WindowStyle="None" Background="Transparent">
+
+    <Grid>
+        <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Rectangle Grid.RowSpan="5" RadiusX="50" RadiusY="50" Width="800" Height="450" Fill="DarkBlue"/>
+                <TextBlock Grid.Row="0" Text="Текущее время:" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="44" Margin="30,0,0,0" FontWeight="Bold" Foreground="#FFDFD10A" ></TextBlock>
+                <TextBlock Name="currentTimeTextBlock" Grid.Row="1" Text="Текущее время" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="44" Margin="90,0,0,0" FontWeight="Bold" Foreground="#FFDFD10A" ></TextBlock>
+                <TextBlock Grid.Row="2" Text="Время доклада:" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="44" Margin="30,0,0,0" FontWeight="Bold" Foreground="LawnGreen" ></TextBlock>
+                <TextBlock Name="docladTimeTextBlock" Grid.Row="3" Text="Текущее время" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="44" Margin="90,0,0,0" FontWeight="Bold" Foreground="LawnGreen" ></TextBlock>
+
+                <StackPanel Grid.Row="4" Orientation="Horizontal">
+                    <Button Content="start" Name="s" Width="70" Click="S_OnClick" ></Button>
+                    <Button Content="start" Name="st" Width="70" Click="St_OnClick"></Button>
+                </StackPanel>
+</Grid>
+        </Viewbox>
+            
+    </Grid>
+</Window>
